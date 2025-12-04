@@ -1,0 +1,24 @@
+{% extends "alabaster/layout.html" %}
+
+{% set title = _('Index') %}
+
+{%- block sidebar1 %}
+{% endblock %}
+
+{%- block content %}
+<div class="document landing_page">
+  <header>
+    <a href="../index.html">SampleDB</a>
+    <a href="../index.html#features">Features</a>
+    <a href="#documentation">Documentation</a>
+    <a href="../index.html#versions">Versions</a>
+    <a href="https://github.com/sciapp/SampleDB">Code</a>
+  </header>
+  <a id="documentation"></a>
+  <div class="body" role="main">
+  <h1>SampleDB Documentation</h1>
+  {% block body %}
+    {{ body }}
+  {% endblock %}
+</div>
+{% endblock %}

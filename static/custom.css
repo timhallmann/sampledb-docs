@@ -1,0 +1,43 @@
+.project-version {
+    text-align: center;
+    font-size: 1.2em;
+}
+
+div.sphinxsidebar p.blurb {
+    text-align: center;
+    margin-bottom: 0;
+}
+
+header.old-version-warning,
+header.develop-version-warning {
+    text-align: center;
+    padding: 20px;
+    font-size: 1.2em;
+}
+
+header.old-version-warning {
+    background-color: #ffdddd;
+}
+
+header.develop-version-warning {
+    background-color: #ddeeff;
+}
+
+header.old-version-warning .latest-version-switch-button,
+header.develop-version-warning .latest-version-switch-button {
+    border: 5px solid transparent;
+    border-radius: 5px;
+    color: white;
+    background-color: #dd5555;
+    text-decoration: none;
+    padding: 5px;
+    margin-left: 20px;
+}
+
+header.old-version-warning .latest-version-switch-button {
+    background-color: #dd5555;
+}
+
+header.develop-version-warning .latest-version-switch-button {
+    background-color: #5577dd;
+}

@@ -1,0 +1,13 @@
+<p class="caption" role="heading"><span class="caption-text">Versions</span></p>
+<ul>
+    {% set versions = versions.split(' ') %}
+    {% for version in versions %}
+    <li class="toctree-l1">
+        {% if version == current_version %}
+            <strong style="font-size: 120%">{{ version }}</strong>
+        {% else %}
+            <a href="{{relative_path_to_versions}}/../{{ version }}/{{ pagename }}.html">{{ version }}</a>
+        {% endif %}
+    </li>
+    {% endfor %}
+</ul>

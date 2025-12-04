@@ -1,0 +1,20 @@
+{% if pagename == 'index' %}
+  {% if current_version == 'merged' %}
+    {% extends 'index_merged.html' %}
+  {% else %}
+    {% extends 'index_docs.html' %}
+  {% endif %}
+{% else %}
+  {% extends 'alabaster/layout.html' %}
+{% endif %}
+{%- block header %}
+  {% set latest_url = '../../latest/' + pagename + '.html' %}
+  {% if pagename == 'index' %}
+    {% set latest_url = '../latest/index.html' %}
+  {% endif %}
+  {% if current_version == 'develop' %}
+    <header class="develop-version-warning">This is documentation for a <strong>development version of SampleDB</strong> ({{ develop_version }}) <a href="{{ latest_url }}" class="latest-version-switch-button">Switch to latest version</a></header>
+  {% elif current_version != latest_version and current_version != 'latest' and current_version != 'merged' %}
+    <header class="old-version-warning">This is documentation for an <strong>old version of SampleDB</strong> ({{ current_version }}) <a href="{{ latest_url }}" class="latest-version-switch-button">Switch to latest version</a></header>
+  {%endif %}
+{% endblock %}

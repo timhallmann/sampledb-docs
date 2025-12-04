@@ -1,0 +1,4 @@
+pygments
+Sphinx
+sphinxcontrib.httpdomain
+vcversioner
