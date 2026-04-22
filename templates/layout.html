@@ -9,8 +9,8 @@
 {% endif %}
 {%- block header %}
   {% set latest_url = '../../latest/' + pagename + '.html' %}
-  {% if pagename == 'index' %}
-    {% set latest_url = '../latest/index.html' %}
+  {% if pagename in ['index', 'changelog'] %}
+    {% set latest_url = '../latest/' + pagename + '.html' %}
   {% endif %}
   {% if current_version == 'develop' %}
     <header class="develop-version-warning">This is documentation for a <strong>development version of SampleDB</strong> ({{ develop_version }}) <a href="{{ latest_url }}" class="latest-version-switch-button">Switch to latest version</a></header>
